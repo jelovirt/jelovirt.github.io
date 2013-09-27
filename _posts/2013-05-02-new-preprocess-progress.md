@@ -1,0 +1,9 @@
+---
+layout: post
+title: New Preprocessing progress
+---
+I haven't been contributing as much new features or bug fixes to DITA-OT 1.8 as to previous releases mostly because I've been working on the preprocessing rewrite. The rewrite that I currently call NP ("New Preprocessing") basically re-implements gen-list and debug-filter targets so that it only reads the source files once when it copies them to the temporary folder and the whole pipeline module is basically a single SAX pipe. In addition, it is URI-based, i.e. internally it processes maps and topics as URIs instead of File. This means you can specify your input as a URI, such as file:/Users/me/work/main.ditamap; as soon as I add support for custom URIResolver, you can start processing from e.g. urn:cms:main/1/en. Moving from File based processing to URI has its problems, but in the long run I think it's a better direction to take.
+
+The problem I have right now is that I really don't want to play nice with the legacy code and have NP work in DITA-OT 1.8 as just an alternative preprocessing step. Instead I'd like to just integrate it into my DITA-OT.Next fork and there not deal with any of the legacy issues. It's just that NP would more likely get used if it were included in the "classic" DITA-OT 1.8. Robert and I haven't decided yet how to go about with DITA-OT 2.0, i.e. a backwards incompatible version that will allow us to dump legacy constraints and actually go forward. My preference would be to have 1.8 be the last 1.x series and then continue the work on 2.x. Note that when I talk about a backwards incompatible next version of DITA-OT, the focus in on the preprocessing parts and higher level architecture, not individual transformation type and their implementations. Sure HTML5 and PDF plug-ins are important and they deserve to be worked on too, but it's something that other people and companies can work on.
+
+\#dita-ot
