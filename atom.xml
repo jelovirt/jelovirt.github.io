@@ -1,0 +1,29 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jarno Elovirta</title>
+  <link href="http://jelovirt.github.io/"/>
+  <link type="application/atom+xml" rel="self" href="http://jelovirt.github.io/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://jelovirt.github.io/</id>
+  <author>
+    <name>Jarno Elovirta</name>
+    <email>jarno@elovirta.com</email>
+  </author>
+  {% for post in site.posts %}
+  <entry>
+    <id>http://jelovirt.github.io{{ post.id | xml_escape }}</id>
+    <link type="text/html" rel="alternate" href="http://jelovirt.github.io{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Jarno Elovirta</name>
+      <uri>http://jelovirt.github.io/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
