@@ -2,7 +2,7 @@
 layout: post
 title: What are you thinking about?
 ---
-- "What are you thinking about?"
+"What are you thinking about?"
 
     <keydef keys="foo" conref="#bar" conkeyref="foo/bar" keyref="quxx" href="test.ditamap"/>
 
