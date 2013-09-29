@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Single pass merge
 ---
 Back in DITA-OT 1.6, I fixed [#1060](https://github.com/dita-ot/dita-ot/issues/1060) to reduce the amount of memory DITA-OT was using when merging map and topics into a single file. It was wasting memory by doing silly things, like writing XML to a string buffer, converting the buffer to a string, and back to string buffer again. My fix then was to use a single byte array and in the process convert the part of the code to use SAX pipes. Memory consumption went down, but it still needs parse intermediate process results and that is both slow and ugly.
