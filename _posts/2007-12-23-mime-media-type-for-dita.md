@@ -3,7 +3,8 @@ title: "MIME Media Type for DITA"
 layout: post
 tags: dita mime-type
 ---
-I've been wondering for a while now that why wasn't registration of MIME Media Type for DITA included into the 1.1 spec?<!--more--> Methinks it would look something like this.
+I've been wondering for a while now that why wasn't registration of MIME Media Type for DITA included into the 1.1 spec? Methinks it would look something like this.
+
 <blockquote>
 <dl>
 <dt><strong>MIME media type name</strong>:</dt>
@@ -16,7 +17,7 @@ I've been wondering for a while now that why wasn't registration of MIME Media T
     <dd>
     <dl>
         <dt>charset:</dt>
-            <dd>This parameter has identical semantics to the charset parameter of the application/xml media type as specified in [RFC3023].</dd>
+        <dd>This parameter has identical semantics to the charset parameter of the application/xml media type as specified in \[RFC3023\].</dd>
      </dl>
      </dd>
 <dt><strong>Encoding considerations</strong>:</dt>
@@ -29,11 +30,11 @@ I've been wondering for a while now that why wasn't registration of MIME Media T
 <dd>
 <dl>
     <dt>Magic number(s):</dt>
-        <dd>There is no single initial octet sequence that is always present in DITA documents.</dd>
+    <dd>There is no single initial octet sequence that is always present in DITA documents.</dd>
     <dt>File extension(s):</dt>
-        <dd>DITA documents are most often identified with the extensions ".dita" or ".ditamap".</dd>
+    <dd>DITA documents are most often identified with the extensions ".dita" or ".ditamap".</dd>
     <dt>Macintosh File Type Code(s):</dt>
-        <dd>TEXT</dd>
+    <dd>TEXT</dd>
 </dl>
 </dd>
 <dt><strong>Intended usage</strong>:</dt>
