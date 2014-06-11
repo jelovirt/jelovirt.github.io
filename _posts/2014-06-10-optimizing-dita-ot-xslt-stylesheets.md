@@ -38,7 +38,7 @@ This could then be used to rewrite XPath and XSLT patterns to
 The XSLT processor would be able to optimize the expression evaluation and only need to check the predicate for elements that
 might apply.
 
-Changing the element name normalization is trivial, but XSLT stylesheet compilation would not as easy. This is because if we have
+Changing the element name normalization is trivial, but XSLT stylesheet compilation would not be as easy. This is because if we have
 an expression such as
 
     *[contains(@class, ' hi-d/b ')]
