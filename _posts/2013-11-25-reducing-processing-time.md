@@ -15,6 +15,6 @@ If your DITA source uses a lot of conrefs that in turn contain a lot of keyrefs,
 
 *Update:* Since DITA-OT 2.0, this is the default processing order.
 
-## Use fast disc for temporary directory
+## Use fast disk for temporary directory
 
 DITA-OT keeps topic and map files as separate files and processes each file multiple times during preprocessing. Thus reading from disk, parsing XML, serializing XML, and writing to disk makes processing quite IO intensive. Use either an [SSD](http://en.wikipedia.org/wiki/Solid-state_drive) or a [RAM disk](http://en.wikipedia.org/wiki/RAM_drive) for temporary files, and never use a temporary directory that is not located on the same machine as where the processing takes place.
