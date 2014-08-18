@@ -12,3 +12,9 @@ The `lib/configuration.properties` file has a property `generate-debug-attribute
 ## Switch the order of conref and keyref processing
 
 If your DITA source uses a lot of conrefs that in turn contain a lot of keyrefs, it may speed up processing if you reverse the order of the two in preprocessing. You simply need to have a copy the `preprocess` Ant target in your plug-in and change the order there. The DITA specification is a good example of this, as the processing time is reduced to less than half of the original time.
+
+*Update:* Since DITA-OT 2.0, this is the default processing order.
+
+## Use fast disc for temporary directory
+
+DITA-OT keeps topic and map files as separate files and processes each file multiple times during preprocessing. Thus reading from disk, parsing XML, serializing XML, and writing to disk makes processing quite IO intensive. Use either an [SSD](http://en.wikipedia.org/wiki/Solid-state_drive) or a [RAM disk](http://en.wikipedia.org/wiki/RAM_drive) for temporary files, and never use a temporary directory that is not located on the same machine as where the processing takes place.
