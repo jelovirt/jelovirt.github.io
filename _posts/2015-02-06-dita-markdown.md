@@ -11,7 +11,7 @@ Like [@Ditaguy](https://twitter.com/Ditaguy) with Lightweight DITA, I think a DI
 
 Once I polish the code, I'll define the constraints DITA imposes on the Markdown document. Right now, the implementation requires that Markdown topics start level 1 header and contain only one level 1 header; all other header levels are treated as section titles. For example, the following Markdown DITA and XML DITA are equivalent:
 
-```markdown
+```
 # Test
 
 Paragraph *test* and **list**:
@@ -45,7 +45,7 @@ Links
 *   [External](http://www.example.com/test.html)
 ```
 
-```xml
+```
 <topic id="x">
   <title>Test</title>
   <body>
