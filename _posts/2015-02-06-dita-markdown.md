@@ -9,7 +9,11 @@ DITA 1.2 spec defines a *DITA document* as:
 
 Like [@Ditaguy](https://twitter.com/Ditaguy) with Lightweight DITA, I think a DITA document doesn't have to be XML. While is doesn't conform to the DITA spec, I wrote [DITA-OT Markdown plug-in](https://github.com/jelovirt/dita-ot-markdown) that allows using Markdown documents with DITA topic and maps. Markdown is converted to DITA topics during preprocessing and all transtype specific code will only see DITA XML documents.
 
-Once I polish the code, I'll define the constraints DITA imposes on the Markdown document. Right now, the implementation requires that Markdown topics start level 1 header and contain only one level 1 header; all other header levels are treated as section titles.
+Since Markdown allows content models that are not compatible with DITA topics, Markdown DITA topics have the following restrictions:
+
+* A topic must start with a level 1 header and contain only one level 1 header, or
+* A Topic must start with a [Pandoc title block](http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html#extension-pandoc_title_block) and may then contain multiple level 1 headers
+* Headers levels other than 1 are treated as section titles.
 
 ## Example
 
