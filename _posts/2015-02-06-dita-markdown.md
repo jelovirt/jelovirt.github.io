@@ -12,7 +12,7 @@ Like [@Ditaguy](https://twitter.com/Ditaguy) with Lightweight DITA, I think a DI
 Since Markdown allows content models that are not compatible with DITA topics, Markdown DITA topics have the following restrictions:
 
 * A topic must start with a level 1 header and contain only one level 1 header, or
-* A Topic must start with a [Pandoc title block](http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html#extension-pandoc_title_block) and may then contain multiple level 1 headers
+* A topic must start with a [Pandoc title block](http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html#extension-pandoc_title_block) and may then contain multiple level 1 headers
 * Headers levels other than 1 are treated as section titles.
 
 ## Example
@@ -150,4 +150,4 @@ The test.md Markdown topic is equivalent to XML topic:
       </body>
     </topic>
 
-Processing requires that `format="markdown"` is used to declare a Markdown file as DITA; exception to this are links in Markdown topics, where file extensions `.md` and `.markdown` will make DITA-OT treat target files are Markdown DITA. I don't particularly like format detection based on file extensions, but this is needed due to limitations in Markdown syntax.
+Processing requires that `format="markdown"` is used to declare a Markdown file as DITA; exception to this are links in Markdown topics, where file extensions `.md` and `.markdown` will make DITA-OT treat target files as Markdown DITA. I don't particularly like format detection based on file extensions, but this is needed due to limitations in Markdown syntax.
