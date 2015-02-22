@@ -13,7 +13,7 @@ Since Markdown allows content models that are not compatible with DITA topics, M
 
 * A topic must start with a level 1 header and contain only one level 1 header, or
 * A topic must start with a [Pandoc title block](http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html#extension-pandoc_title_block) and may then contain multiple level 1 headers
-* Headers levels other than 1 are treated as section titles.
+* Header levels 2-6 are treated as nested topics, except if they use header attribute extensions to add class `section` or `example`; in that case they are treated as `section` or `example` elements, respectively.
 
 ## Example
 
@@ -49,6 +49,8 @@ test.md:
         1.  nested
         1.  list
     
+    ## Example {.example}
+    
     Code example on `for` loop:
     
         for i in items:
@@ -78,7 +80,7 @@ The test.md Markdown topic is equivalent to XML topic:
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-    <topic id="x">
+    <topic id="test">
       <title>Test</title>
       <body>
         <p>Paragraph <i>test</i> and <b>list</b>:</p>
@@ -88,33 +90,25 @@ The test.md Markdown topic is equivalent to XML topic:
           <li>item</li>
         </ul>
         <ul>
-          <li>asterix
-            <ul>
-              <li>list</li>
-            </ul>
-          </li>
-          <li>item
-            <ul>
-              <li>nested</li>
-            </ul>
-          </li>
+          <li>asterix<ul><li>list</li></ul></li>
+          <li>item<ul><li>nested</li></ul></li>
         </ul>
         <ol>
           <li>ordered</li>
           <li>list</li>
-          <li>item
-            <ol>
-              <li>nested</li>
-              <li>list</li>
-            </ol>
-          </li>
+          <li>item<ol><li>nested</li><li>list</li></ol></li>
         </ol>
-        <p>Code example on <codeph>for</codeph> loop:</p>
-        <codeblock>for i in items:
+        <example id="example">
+          <title>Example </title>
+          <p>Code example on <codeph>for</codeph> loop:</p>
+          <codeblock>for i in items:
         println(i)
     </codeblock>
-        <section>
-          <title>Images</title>
+        </example>
+      </body>
+      <topic id="images">
+        <title>Images</title>
+        <body>
           <p>An inline <image href="test.png"><alt>Alt</alt></image>.</p>
           <image href="test.png">
             <alt>Alt</alt>
@@ -126,9 +120,11 @@ The test.md Markdown topic is equivalent to XML topic:
             </image>
           </fig>
           <image keyref="image-key"/>
-        </section>
-        <section>
-          <title>Links</title>
+        </body>
+      </topic>
+      <topic id="links">
+        <title>Links</title>
+        <body>
           <ul>
             <li>
               <xref href="test.md">Markdown</xref>
@@ -146,8 +142,9 @@ The test.md Markdown topic is equivalent to XML topic:
               <xref keyref="key"/>
             </li>
           </ul>
-        </section>
-      </body>
+        </body>
+      </topic>
     </topic>
+
 
 Processing requires that `format="markdown"` is used to declare a Markdown file as DITA; exception to this are links in Markdown topics, where file extensions `.md` and `.markdown` will make DITA-OT treat target files as Markdown DITA. I don't particularly like format detection based on file extensions, but this is needed due to limitations in Markdown syntax.
