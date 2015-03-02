@@ -24,7 +24,8 @@ test.ditamap:
     <map>
       <topicref href="test.md" format="markdown"
                 keys="key"/>
-      <keydef keys="image-key" href="test.png"/>
+      <keydef href="test.png" format="png"
+              keys="image-key"/>
     </map>
 
 test.md:
