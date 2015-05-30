@@ -1,5 +1,6 @@
 ---
 title: Reducing processing time
+layout: post
 ---
 
 A non-exhaustive list of configuration changes that can be used to reduce DITA-OT processing time:
