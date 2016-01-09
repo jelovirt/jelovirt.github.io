@@ -1,0 +1,17 @@
+---
+title: Shomenuchi
+layout: post
+tags: aikido
+---
+
+In aikido, most of the striking attacks we practice are either shomenuchi or yokomenuchi. Given that we focus so much on those two strikes--which are basically exactly the same attach--I find it interesting that we never actually talk about them. Occasionally we practice them in a suburi type of way, but I find that most of the time it's too basic. We raraly talk about the motives behind those attacks and what's same or different about them.
+
+My current thesis is that of the two, shomenuchi is the primary attach and yokomenuchi is the application. They are not the same technique and both have their own applications, so this division is not absolute, but in most cases when practicing aikido, this applies.
+
+If you look at the pure mechanics, both strikes start with the hand over the forehead and the elbow is on the center line. For shomenuchi, the elbow drops on the line and the hand follows on the line; for yokomenuchi the elbow drops to omote side of the center line and the hand ends on the center line in an arch. When you compare this to gyakuyokomenuchi, the same mechanics still apply: the elbow drops to the ura side and the moves in an arch to that side. To me, this clearly defines the difference to be just the direction of the elbow, not the hand. All three strikes start from the same position.
+
+Unless you explicitly want to strike the side of the head or neck, it is the movement and position of nage that will decide whether the strike will be shomenuchi or yokomenuchi. We start of from a position where nage is on the attack line and uke strikes the head of the nage. If nage moves before uke has lauched the strike, uke will be able to correct the difference in angle or distance, and will align the attack line and the center line. That is, nothing has changed. However, if nage moves when uke has committed to the attack and lauched the strike, uke will no longer be able to align the center and attack lines with foot movement and body position. Uke is able to follow nage with the strike and if nage moves to the omote side of uke, the initial shomenuchi becomes a yokomenuchi because the strike follows nage. Thus, yokomenuchi is a result of adjustment.
+
+When you think about yokomenuchi as an application and think about the story behind it, it changed the way I execute the technique. I used to tilt my head, just a little, as I was focusing on the side of the head, the contact point; by not thinging about a diagonal strike, that strightened my position and was able to also move more easily because I had not decided on foot placement in advance. I was also interesting that the position of the hand and elbow changed into something more neutral, it became easier to add delay to the action.
+
+Another part of improving my strikes was thinking about the timing. Instead of raising my hand in advance above my head and keeping it there as if to mark my attack, I took the old idea "if you're going to shoot, shoot, don't talk." In order to strike downwards, I only have to raise my hand until it reaches the starting position, I don't have to keep it there. The adjustment I had to make was not long, only some parts of a second, but the feeling that the hand doesn't stop on the top of the head, it only moves there and then immediately changes direction. The challenge is to not speed up the movement, only reduce the duration of the stop.
