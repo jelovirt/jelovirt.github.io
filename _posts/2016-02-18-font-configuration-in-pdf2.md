@@ -18,12 +18,12 @@ While I18N is a numeronym for internationalization, the I18N processing in PDF2 
     ```xml
     <fo:block font-family="Serif">Copyright © 1999.</fo:block>
     ```
-1.  All text content in the generated FO file is processed to categorize every character into a character group. There groups include SymbolsSuperscript, Symbols, or Japanese. To which group a given character will belong to is configured in language specific configuration files. If no special group is configured for a character, it's considered to be part of the special "default" group. Consecutive characters belonging to the same group are collapsed into a single sequence. Output for this process is e.g.:
+1.  All text content in the generated FO file is processed to categorize every character into a character group. These groups include SymbolsSuperscript, Symbols, or Japanese. To which group a given character will belong to is configured in language specific configuration files. If no special group is configured for a character, it's considered to be part of the special "default" group. Consecutive characters belonging to the same group are collapsed into a single sequence. Output for this process is e.g.:
     
     ```xml
     <fo:block font-family="Serif">
-      Copyright <opentopic-i18n:text-fragment char-set="SymbolsSuperscript"
-        >©</opentopic-i18n:text-fragment> 1999.
+      Copyright <opentopic-i18n:text-fragment char-set="SymbolsSuperscript"
+        >©</opentopic-i18n:text-fragment> 1999.
     </fo:block>
     ```
 1.  Then the FO file is processed again to resolve the font for each group. The logical font family is read from the closest ancestor FO element. Then the font mapping configuration is used to look up the physical font for each combination of logical font and character group. The font mapping can also change the character's base-line and size. Output from this is e.g.
@@ -31,7 +31,7 @@ While I18N is a numeronym for internationalization, the I18N processing in PDF2 
     ```xml
     <fo:block font-family="Times New Roman, Times">
       Copyright <fo:inline font-family="Times New Roman, Times"
-        baseline-shift="20%" font-size="smaller">©</fo:inline> 1999.
+        baseline-shift="20%" font-size="smaller">©</fo:inline> 1999.
     </fo:block>
     ```
 
@@ -47,10 +47,10 @@ When font mapping process is not needed, it can be simply disabled by setting pr
 
 ```xml
 <xsl:attribute-set name="__fo__root">
-  <xsl:attribute name="font-family">serif</xsl:attribute>
+  <xsl:attribute name="font-family">serif</xsl:attribute>
 </xsl:attribute-set>
 <xsl:attribute-set name="common.title">
-  <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+  <xsl:attribute name="font-family">sans-serif</xsl:attribute>
 </xsl:attribute-set>
 ```
 
@@ -58,10 +58,10 @@ can be changed to
 
 ```xml
 <xsl:attribute-set name="__fo__root">
-  <xsl:attribute name="font-family">Times New Roman, Times</xsl:attribute>
+  <xsl:attribute name="font-family">Times New Roman, Times</xsl:attribute>
 </xsl:attribute-set>
 <xsl:attribute-set name="common.title">
-  <xsl:attribute name="font-family">Helvetica, Arial Unicode MS</xsl:attribute>
+  <xsl:attribute name="font-family">Helvetica, Arial Unicode MS</xsl:attribute>
 </xsl:attribute-set>
 ```
 
@@ -69,12 +69,12 @@ That's it all, your fonts are configured. If you need to e.g. change the font pe
 
 ```xml
 <xsl:attribute-set name="__fo__root">
-  <xsl:attribute name="font-family">
-    <xsl:choose>
-      <xsl:when test="$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
-      <xsl:otherwise>Times New Roman, Times</xsl:otherwise>
-    </xsl:choose>
-  </xsl:attribute>
+  <xsl:attribute name="font-family">
+    <xsl:choose>
+      <xsl:when test="$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
+      <xsl:otherwise>Times New Roman, Times</xsl:otherwise>
+    </xsl:choose>
+  </xsl:attribute>
 </xsl:attribute-set>
 ```
 
