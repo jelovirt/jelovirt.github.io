@@ -71,7 +71,7 @@ That's it all, your fonts are configured. If you need to e.g. change the font pe
 <xsl:attribute-set name="__fo__root">
   <xsl:attribute name="font-family">
     <xsl:choose>
-      <xsl:when test="\$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
+      <xsl:when test="$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
       <xsl:otherwise>Times New Roman, Times</xsl:otherwise>
     </xsl:choose>
   </xsl:attribute>
