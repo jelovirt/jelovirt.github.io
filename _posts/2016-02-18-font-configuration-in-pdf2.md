@@ -7,7 +7,7 @@ tags: dita-ot pdf2
 
 ## Background
 
-Back when PDF2 was originally developed, FOP didn't support the font-selection-strategy property. This mean it was impossible to change the font per character if the font that was used didn't contain a particular glyph. FOP still doesn't support per-character font selection, so if FOP is used the I18N processing may still be needed when the fonts don't contain all glyphs needed.
+Back when PDF2 was originally developed, FOP didn't support the font-selection-strategy property. This mean it was impossible to change the font per character if the font that was used didn't contain a particular glyph. An FO preprocessing step called _I18N_ was added to DITA-OT to enable per character font selection. FOP still doesn't support per-character font selection, so if FOP is used the I18N processing may still be needed when the fonts don't contain all glyphs needed.
 
 ## What is I18N processing
 
