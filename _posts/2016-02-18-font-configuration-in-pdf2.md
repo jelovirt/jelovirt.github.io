@@ -39,7 +39,7 @@ Font mapping thus allows changing fonts per language, e.g. using Helvetica for 
 
 However, if you actually want to do this, you need to configure the character groups for each language and also create a group for each language. Without the group configuration, you can't e.g. use a separate fonts for Japanese and Swedish.
 
-The 18N font mapping is complex, difficult to extend, and uses processing time. For some complex cases it is suitable, but for the majority of cases a more simple approach is preferred.
+The 18N font mapping is complex, difficult to extend, and lengthens processing time. For some complex cases it is suitable, but for the majority of cases a more simple approach is preferred.
 
 ## The right way
 
