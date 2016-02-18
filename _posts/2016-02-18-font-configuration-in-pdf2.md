@@ -3,7 +3,7 @@ title: Font configuration in PDF2
 layout: post
 tags: dita-ot pdf2
 ---
-TL;DR: You might be doing it wrong.
+**TL;DR**: You might be doing it wrong.
 
 ## Background
 
