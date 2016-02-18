@@ -44,6 +44,7 @@ The 18N font mapping is complex, difficult to extend, and uses processing time. 
 ## The right way
 
 When font mapping process is not needed, it can be simply disabled by setting property `org.dita.pdf2.i18n.enabled` to `false`. Then the stylesheet that convert DITA to FO need to be updated to use physical font-families instead of the logical font families. For example the following attribute-sets that use logical font families
+
 ```xml
 <xsl:attribute-set name="__fo__root">
   <xsl:attribute name="font-family">serif</xsl:attribute>
@@ -52,7 +53,9 @@ When font mapping process is not needed, it can be simply disabled by setting pr
   <xsl:attribute name="font-family">sans-serif</xsl:attribute>
 </xsl:attribute-set>
 ```
+
 can be changed to
+
 ```xml
 <xsl:attribute-set name="__fo__root">
   <xsl:attribute name="font-family">Times New Roman, Times</xsl:attribute>
@@ -61,7 +64,9 @@ can be changed to
   <xsl:attribute name="font-family">Helvetica, Arial Unicode MS</xsl:attribute>
 </xsl:attribute-set>
 ```
+
 That's it all, your fonts are configured. If you need to e.g. change the font per language, you can use e.g.
+
 ```xml
 <xsl:attribute-set name="__fo__root">
   <xsl:attribute name="font-family">
