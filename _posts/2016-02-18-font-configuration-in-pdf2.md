@@ -7,7 +7,7 @@ tags: dita-ot pdf2
 
 ## Background
 
-Back when PDF2 was originally developed, FOP didn't support the font-selection-strategy property. This mean it was impossible to change the font per character if the font that was used didn't contain a particular glyph. An FO preprocessing step called _I18N_ was added to DITA-OT to enable per character font selection. FOP still doesn't support per-character font selection, so if FOP is used the I18N processing may still be needed when the fonts don't contain all glyphs needed.
+Back when PDF2 was originally developed, FOP didn't support the font-selection-strategy property. This mean it was impossible to change the font per character if the font that was used didn't contain a particular glyph. An FO preprocessing step called _I18N_ was added to DITA-OT to enable per character font selection. FOP still doesn't support per-character font selection, so if FOP is used the I18N processing may still be needed when the fonts don't contain all glyphs needed.
 
 ## What is I18N processing
 
@@ -35,7 +35,7 @@ While I18N is a numeronym for internationalization, the I18N processing in PDF2 
     </fo:block>
     ```
 
-Font mapping thus allows changing fonts per language, e.g. using Helvetica for English and AdobeMyungjoStd-Medium for Korean, or making a given character superscript without marking up the character in DITA source with <sup>.
+Font mapping thus allows changing fonts per language, e.g. using Helvetica for English and AdobeMyungjoStd-Medium for Korean, or making a given character superscript without marking up the character in DITA source with <sup>.
 
 However, if you actually want to do this, you need to configure the character groups for each language and also create a group for each language. Without the group configuration, you can't e.g. use a separate fonts for Japanese and Swedish.
 
@@ -71,8 +71,8 @@ That's it, all your fonts are configured. If you need to e.g. change the font pe
 <xsl:attribute-set name="__fo__root">
   <xsl:attribute name="font-family">
     <xsl:choose>
-      <xsl:when test="$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
-      <xsl:otherwise>Times New Roman, Times</xsl:otherwise>
+      <xsl:when test="$locale.lang = 'jp'">KozMinProVI-Regular</xsl:when>
+      <xsl:otherwise>Times New Roman, Times</xsl:otherwise>
     </xsl:choose>
   </xsl:attribute>
 </xsl:attribute-set>
