@@ -65,7 +65,7 @@ can be changed to
 </xsl:attribute-set>
 ```
 
-That's it all, your fonts are configured. If you need to e.g. change the font per language, you can use e.g.
+That's it, all your fonts are configured. If you need to e.g. change the font per language, you can use e.g.
 
 ```xml
 <xsl:attribute-set name="__fo__root">
@@ -80,4 +80,4 @@ That's it all, your fonts are configured. If you need to e.g. change the font pe
 
 ## Conclusion
 
-The font mapping process has its use cases and it's a working solution. However, if your font configuration needs are simple and you're still using font mapping process, you're doing it wrong. The default in PDF2 is to use I18N processing because of backwards compatibility, but this is something that will change in DITA-OT 3.0. The font mapping process code will still be available, but will not be enabled by default. The DITA-OT PDF plugin generator already generates code where font mapping process is disabled. Thus, if you're able to move over to the simple font configuration model, there's not reason to delay.
+The font mapping process has its use cases and it's a working solution. However, if your font configuration needs are simple and you're still using font mapping process, you're doing it wrong. The default in PDF2 is to use I18N processing because of backwards compatibility, but this is something that will probably change in DITA-OT 3.0. The font mapping process code will still be available, but will not be enabled by default. The DITA-OT PDF plugin generator already generates code where font mapping process is disabled. Thus, if you're able to move over to the simple font configuration model, there's not reason to delay.
