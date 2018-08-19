@@ -1,0 +1,54 @@
+https://keybase.io/jelovirt
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.elovirta.com
+  * I am jelovirt (https://keybase.io/jelovirt) on keybase.
+  * I have a public key ASDGfYkn6fmGTJ5ZyI7mgQv0kcfg7591P8b6bcRagj9jEgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200715a7456fe1621341a678dbd57e6e8aab21ef09322c6c9126f22e2580d9abf40a",
+      "host": "keybase.io",
+      "kid": "0120c67d8927e9f9864c9e59c88ee6810bf491c7e0ef9f753fc6fa6dc45a823f63120a",
+      "uid": "f6c385e5f7ce7cd18c14b84ff67d8719",
+      "username": "jelovirt"
+    },
+    "merkle_root": {
+      "ctime": 1534695557,
+      "hash": "3d96c55cfd14035aa3921154b7d9e1c312a38ad0381f60173c80f11edab15dadc1d31cf45ca33e29368263fc80abff6cfa7098bf9579b85c6aa03a5c6dc8fbae",
+      "hash_meta": "ed42e7e85703f8f02b1b60825ee784e6b5c07b45813580fc588bf1a0ee816246",
+      "seqno": 3477885
+    },
+    "service": {
+      "entropy": "fY3tAVG5kunoDQB9fP9ObrgX",
+      "hostname": "www.elovirta.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.5.0"
+  },
+  "ctime": 1534695631,
+  "expire_in": 504576000,
+  "prev": "a4ccc6c0565889252ae2afa0d29be7533630b1abc973ef8ee69784f5e09b8342",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxn2JJ+n5hkyeWciO5oEL9JHH4O+fdT/G+m3EWoI/YxIKp3BheWxvYWTESpcCCcQgpMzGwFZYiSUq4q+g0pvnUzYwsavJc++O5peE9eCbg0LEILV0kmgMFa5CgA8PcISleLu2uC353bAzANvKrdHvmBU5AgHCo3NpZ8RATmxK95W0gkg0irvujEA0K+mK6Uz9jtHNZTNIS4pecYfHWGs0mW9kfT2YNDjo8utUnl04s0OiaQ4lsh32CnxYAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEam4P+OE7GM33eWPQJc+7G9q/HSDVQ089KQx+1YZxK2o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jelovirt
+
